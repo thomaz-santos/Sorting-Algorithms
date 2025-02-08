@@ -9,10 +9,19 @@ function validateSort(list: number[]) {
 }
 
 function formatList(input: string) {
-    Number.parseInt
+    try {
+        input = "[" + input + "]";
+        let list: number[] = JSON.parse(input);
+
+        return list
+    } catch (error) {
+        console.log("Erro ao transformar a string" + error)
+        return [];
+    }
 }
 
-function bubleSort(list: number[]) {
+function bubleSort(input: string) {
+    let list: number[] = formatList(input);
     console.log("Starting sort:\n")
     console.log(list);
 
@@ -37,4 +46,4 @@ function bubleSort(list: number[]) {
     console.log("\nMethod: Bubble Sort\nIterations: " + iterationCounter + " \nSorting Finished\n-----------------");
 }
 
-
+// bubleSort("10, 5, 1");

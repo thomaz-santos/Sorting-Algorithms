@@ -8,7 +8,7 @@
 </head>
 <body>
     <label for="sortingInput">Input the list to be sorted</label>
-    <input type="number" name="sortingInput">
-    <button onclick="bubleSort()">Sort list</button>
+    <input type="text" name="sortingInput" id="sortingInput">
+    <button onclick="bubleSort(document.getElementById('sortingInput').value)">Sort list</button>
 </body>
 </html>
