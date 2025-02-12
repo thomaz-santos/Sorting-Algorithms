@@ -1,5 +1,10 @@
 {
   "devDependencies": {
     "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "Node": "node --watch index.js",
+    "TS": "npx tsc --watch index.ts",
+    "dev": "start cmd /k \"npm run Node\" && start cmd /k \"npm run TS\""
   }
 }
